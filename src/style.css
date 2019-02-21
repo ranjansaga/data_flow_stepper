@@ -1,0 +1,127 @@
+:root {
+  --background-color: #FFFFFF;
+  --primary-color: #888888;
+}
+
+*{
+  box-sizing: border-box;
+  font-family: 'comic-sans';
+}
+
+.steps {
+  width: 90%;
+  background-color: #FFF;
+  padding: 24px 0;
+  position: relative;
+  margin: auto;
+}
+
+.steps::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 24px;
+  width: 2px;
+  background-color: rgba(0, 0, 0, 0.2);
+  left: calc(50px / 2);
+  z-index: 1;
+}
+
+.steps::after {
+  content: '';
+  position: absolute;
+  height: 13px;
+  width: 13px;
+  background-color: var(--primary-color);
+  box-shadow: 0px 0px 5px 0px var(--primary-color);
+  border-radius: 15px;
+  left: calc(50px / 2);
+  bottom: 24px;
+  transform: translateX(-45%);
+  z-index: 2;
+}
+  
+.step {
+  padding: 10px 20px 24px 50px;
+  position: relative;
+  transition: all 0.4s ease-in-out;
+  background-color: #FFF;
+}
+
+
+.circle-icon-wrapper {
+    position: absolute;
+    display: inline-block;
+    vertical-align: middle;
+    left: 5px;
+    z-index: 2;
+}
+
+.circle-icon {
+    vertical-align: middle;
+    display: table-cell;
+    height: 40px;
+    width:40px;
+    color: #fff;
+    border-radius: 50%;
+    text-align: center;
+    font: 13px "josefin sans", arial;
+    box-shadow: 2px 2px 2px 0px #a2a2a2;
+}
+
+.step::after {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: 2px;
+  box-shadow: 1px 1px 2px 0px #a2a2a2;
+  background-color: rgb(198, 198, 198);
+  left: calc(50px / 2);
+  top: 0;
+  z-index: 1;
+}
+
+.step.minimized {
+  background-color: #FFF;
+  transition: background-color 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.header {
+  padding-left: 5px;
+  user-select: none;
+  font-size: 16px;
+  color: black;
+}
+
+.step-content-wrapper {
+  transition: all 0.3s ease-in-out;
+  position: relative;
+  width: 100%;
+  padding: 25px 0px 0px 10px;
+  color: #403b3b;
+}
+
+.step.minimized > .step-content {
+  height: 0px;
+}
+
+.step.minimized:hover {
+  background-color: rgba(0, 0, 0, 0.06);
+}
+
+.red::before {
+  background-color: red;
+}
+
+.red::after {
+  background-color: red;
+}
+
+.green::before {
+  background-color: green;
+}
+
+.green::after {
+  background-color: green;
+}
