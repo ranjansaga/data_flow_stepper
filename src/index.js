@@ -8,30 +8,20 @@ import "typeface-roboto";
 class TestStepper extends Component {
   constructor(props) {
     super(props);
+    this.state = {
+      data: props.data
+    }
   }
 
-  render() {
-    const nodes = this.props.data.map((nodeObj, index) => {
-      let nodeStyle = {
-                    background: nodeObj.color
-                  }
-      return (
-        <div>
-          <div class="circle-icon-wrapper">
-            <div
-              class="circle-icon"
-              style={nodeStyle} >
-              <i class={nodeObj.icon} aria-hidden="true"></i>
-            </div>
-          </div>
-          <div
-            key={index}
-            className={'step ' + nodeObj.color}
-            >
-            <div className="step-header">
-              <div className="header">{nodeObj.node_name}</div>
-            </div>
-            <div className="step-content-wrapper">
+  onStepToggle = function (nodeObj) {
+    console.log('nodeObj in toggle-->', nodeObj)
+    nodeObj.active = !nodeObj.active;
+    this.forceUpdate();
+  }
+
+  renderStepContent = function(nodeObj) {
+    return (
+      <div className="step-content-wrapper">
               <div className="step-content">
                 {
                   nodeObj.node_information.map((dataObj) => {
@@ -54,6 +44,35 @@ class TestStepper extends Component {
                 }
               </div>
             </div>
+    )
+  }
+
+
+  render() {
+    const nodes = this.state.data.map((nodeObj, index) => {
+      let nodeStyle = {
+                    background: nodeObj.color
+                  }
+      return (
+        <div>
+          <div
+            onClick={() => {this.onStepToggle(nodeObj)}}
+            className="circle-icon-wrapper">
+            <div
+              class="circle-icon"
+              style={nodeStyle} >
+              <i className={nodeObj.icon} aria-hidden="true"></i>
+            </div>
+          </div>
+          <div
+            key={index}
+            className={'step ' + nodeObj.color}
+            >
+            <div className="step-header">
+              <div className="header">{nodeObj.node_name}</div>
+            </div>
+              { nodeObj.active &&
+                this.renderStepContent(nodeObj)}
           </div>
         </div>
       );
@@ -75,6 +94,7 @@ class App extends Component {
  	"node_name": "Client",
  	"color": "green",
  	"icon": "fa fa-circle",
+  "active": false,
  	"node_information": [{
  			"label": "Number of pollings done for each target",
  			"value": 23,
@@ -95,6 +115,7 @@ class App extends Component {
  	"node_name": "Router1",
  	"color": "red",
  	"icon": "fa fa-pencil",
+  "active": false,
  	"node_information": [{
  			"label": "Number of pollings done for each target",
  			"value": 33,
