@@ -1,0 +1,26 @@
+{
+  "files": {
+    "main.css": "/data_flow_stepper/static/css/main.991d3a0e.chunk.css",
+    "main.js": "/data_flow_stepper/static/js/main.1aa589ae.chunk.js",
+    "main.js.map": "/data_flow_stepper/static/js/main.1aa589ae.chunk.js.map",
+    "runtime-main.js": "/data_flow_stepper/static/js/runtime-main.f145061e.js",
+    "runtime-main.js.map": "/data_flow_stepper/static/js/runtime-main.f145061e.js.map",
+    "static/css/2.a3461e85.chunk.css": "/data_flow_stepper/static/css/2.a3461e85.chunk.css",
+    "static/js/2.80c036f4.chunk.js": "/data_flow_stepper/static/js/2.80c036f4.chunk.js",
+    "static/js/2.80c036f4.chunk.js.map": "/data_flow_stepper/static/js/2.80c036f4.chunk.js.map",
+    "index.html": "/data_flow_stepper/index.html",
+    "precache-manifest.8878eeeb126977ecd439149163632b90.js": "/data_flow_stepper/precache-manifest.8878eeeb126977ecd439149163632b90.js",
+    "service-worker.js": "/data_flow_stepper/service-worker.js",
+    "static/css/2.a3461e85.chunk.css.map": "/data_flow_stepper/static/css/2.a3461e85.chunk.css.map",
+    "static/css/main.991d3a0e.chunk.css.map": "/data_flow_stepper/static/css/main.991d3a0e.chunk.css.map",
+    "static/js/2.80c036f4.chunk.js.LICENSE.txt": "/data_flow_stepper/static/js/2.80c036f4.chunk.js.LICENSE.txt",
+    "static/media/index.css": "/data_flow_stepper/static/media/roboto-latin-900italic.ebf6d164.woff2"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.f145061e.js",
+    "static/css/2.a3461e85.chunk.css",
+    "static/js/2.80c036f4.chunk.js",
+    "static/css/main.991d3a0e.chunk.css",
+    "static/js/main.1aa589ae.chunk.js"
+  ]
+}
