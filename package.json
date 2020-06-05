@@ -2,8 +2,9 @@
   "name": "react-absrn9",
   "version": "0.0.0",
   "private": true,
+  "homepage": "https://ranjansaga.github.io/data_flow_stepper/",
   "dependencies": {
-    "bootstrap":"4.0.0-alpha.6",
+    "bootstrap": "4.0.0-alpha.6",
     "font-awesome": "^4.7.0",
     "typeface-roboto": "latest",
     "jquery": "1.9.1 - 3",
@@ -16,9 +17,24 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "devDependencies": {
+    "gh-pages": "^3.0.0",
     "react-scripts": "latest"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
